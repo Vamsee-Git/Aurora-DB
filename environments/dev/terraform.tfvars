@@ -1,1 +1,6 @@
-
+db_cluster_identifier = "my-aurora-cluster"
+db_instance_class     = "db.r5.large"
+db_username           = "admin"
+db_password           = "SuperSecretPassword123!"
+region                = "us-west-2"
+secret_name           = "myDBSecret"
