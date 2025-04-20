@@ -1,6 +1,7 @@
 variable "db_cluster_identifier" {
   description = "The DB cluster identifier"
   type        = string
+  default     = "my-aurora-cluster"
 }
 
 variable "db_instance_class" {
