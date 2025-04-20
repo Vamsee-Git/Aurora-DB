@@ -1,6 +1,6 @@
 resource "aws_rds_cluster" "aurora" {
   cluster_identifier      = var.db_cluster_identifier
-  engine                  = "aurora-mysql"
+  engine                  = "aurora-mysql"
   master_username         = var.db_username
   master_password         = var.db_password
   backup_retention_period = 5
@@ -12,4 +12,5 @@ resource "aws_rds_cluster_instance" "aurora_instances" {
   identifier         = "${var.db_cluster_identifier}-instance-${count.index}"
   cluster_identifier = aws_rds_cluster.aurora.id
   instance_class     = var.db_instance_class
+  engine             = aws_rds_cluster.aurora.engine
 }
