@@ -23,3 +23,8 @@ variable "region" {
   type        = string
   default     = "us-west-2"
 }
+
+variable "secret_name" {
+  description = "The name of the secret in AWS Secrets Manager"
+  type        = string
+}
